@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+  <h1>Weather App</h1>
+  <div class="tab-container">
+    <p class="tab" id="user-tab">Your Weather</p>
+    <p class="tab" id="search-tab">Search Weather</p>
+  </div>
+
+      
+
+      <!-- <div class="form">
+        <input type="text">
+        <div class="image-container">
+          <img src="your-image.jpg" alt="Your Image Description">
+        </div>
+      </div> -->
+    <div class="weather-container" >  
+      <div class="your-weather" id="permission">
+        <img src="./assets/location.png" alt="location">
+        <h2>Grant Location Access</h2>
+        <p>Allow Access To Get Weather Information</p>
+        <button id="grant-access" >Grant Access</button>
+      </div>
+
+      <form id="form-containt">
+        <input type="text" id="city-input" placeholder="Search for city ... ">
+        <div id="search-btn">
+          <img src="./assets/search.png" width="25px" height="25px" style="margin-top: 3px;">
+        </div>
+        
+      </form>
+
+      <div id="loading-container" >
+        <img src="./assets/loading3-unscreen.gif" width="150" height="150" />
+        <p>Loading</p>
+      </div>
+
+      <div id="search-weather" >
+
+            <div class="location">
+                <p id="city-name">Bhopal</p>
+                <img src="./assets/in.png" id="country-img" width="30px" height="25px">
+            </div>
+
+            <div id="weather-main">Haze</div>
+
+            <img id="weather-icon" src="./assets/in.png" width="150px">
+
+            <div id="temperature">16.13c</div>
+
+            <div class="parameter-container">
+                <div class="parameter">
+                    <img src="./assets/wind.png" alt="wind image" >
+                    <p class="parameter-title">Windspeed</p>
+                    <p class="parameter-value" id="wind-speed">1.79m/s</p>
+                </div>
+                <div class="parameter">
+                    <img src="./assets/humidity.png" alt="wind image" >
+                    <p class="parameter-title">Humidity</p>
+                    <p class="parameter-value" id="humidity">55%</p>
+                </div>
+                <div class="parameter">
+                    <img src="./assets/cloud.png" alt="wind image" >
+                    <p class="parameter-title">Clouds</p>
+                    <p class="parameter-value" id="cloud">0%</p>
+                </div>
+            </div>
+      
+      </div>
+      </div>
+
+      <div id="error">
+        <img src="./assets/erro2.png" width="200px">
+        <p id="error message">City not found</p>
+      </div>
+   
+<script src="script.js"></script>
+</body>
+</html>

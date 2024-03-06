@@ -1,0 +1,302 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    color: white;
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+/* header and Tab styles */
+
+h1 {
+    text-align: center;
+    margin-block: 2rem;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+}
+
+.tab-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+.current-tab {
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.your-weather{
+    width: 90%;
+    max-width: 550px;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap:1rem;
+}
+
+.your-weather img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.your-weather h2{
+    text-transform: capitalize;
+    letter-spacing: 1.75px;
+    font-size: 2rem;
+    margin-top: 1.3rem;
+}
+
+.your-weather p{
+    text-transform: capitalize;
+    letter-spacing: 1.75px;
+}
+
+.your-weather button{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: rgb(86, 131, 170);
+    margin: 0.8rem;
+    color: white;
+    cursor: pointer;
+    animation: backgoundChange 3s infinite ease-in-out;
+}
+
+ 
+@keyframes backgoundChange {
+    0%{
+        transform: scale(0.9);
+        box-shadow: 1px 1px 3px red,2px 2px 3px black,-1px 1px 3px red,-2px 2px 3px black,1px -1px 3px red,2px -2px 3px black,-1px -1px 3px red,-2px -2px 3px black;
+
+    }
+    50%{
+        transform: scale(1.1);
+        box-shadow: 3px 3px 6px red,4px 4px 7px black,-3px 3px 6px red,-4px 4px 7px black,3px -3px 6px red,4px -4px 7px black,-3px -3px 6px red,-4px -4px 7px black;
+    }
+    100%{
+        transform: scale(0.9);
+        box-shadow: 1px 1px 3px red,2px 2px 3px black,-1px 1px 3px red,-2px 2px 3px black,1px -1px 3px red,2px -2px 3px black,-1px -1px 3px red,-2px -2px 3px black;
+    }
+}
+
+#search-weather{
+    width: 90%;
+    max-width: 550px;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+form{
+    width: 100%;
+    max-width: 550px;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 1rem ;
+}
+form input{
+    width: 90%;
+    padding:0.8rem 1rem;
+    border-radius: 0.8rem;
+    outline: none;
+    border: none;
+    background-color: rgb(240, 248, 255,0.3);
+    color:white;
+    font-size: 1.1rem;
+}
+form input::placeholder{
+    letter-spacing: 1.75px;
+    font-size: 1rem;
+    color: white;
+}
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(86, 131, 170);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+form div img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#loading-container{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2rem;
+}
+#loading-container p{
+    text-transform: uppercase;
+    letter-spacing: 1.75px;
+    font-size: 1.3rem;
+}
+#search-weather .location{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.8rem 0;;
+}
+
+#city-name{
+    letter-spacing: 1.75px;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+/* loading-container */
+#weather-main{
+    letter-spacing: 1.75px;
+    font-size: 1.5rem;
+    margin: 0.8rem 0;
+}
+
+#weather-icon{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+#temperature{
+    letter-spacing: 1.75px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.8rem 0;
+}
+
+.parameter-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.parameter {
+    width: 30%;
+    max-width: 200px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px 0;
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.parameter-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter-value {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+#error{
+    display: none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 0.8rem 0;
+    padding: 2rem;
+}
+#error p{
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-style: italic;
+    text-shadow: 2px 2px 4px red,3px 3px 6px black;
+    animation: move 3s infinite ease-in;
+}
+
+@keyframes move {
+    0%{
+        transform: scale(0.8);
+        text-shadow: 1px 1px 3px red,2px 2px 3px black;
+
+    }
+    25%{
+        transform: scale(1.0);
+        text-shadow: 2px 2px 4px red,3px 3px 6px black;
+    }
+    50%{
+        transform: scale(1.2);
+        text-shadow: 3px 3px 6px red,4px 4px 7px black;
+    }
+    75%{
+        transform: scale(1.0);
+        text-shadow: 2px 2px 4px red,3px 3px 6px black;
+    }
+    100%{
+        transform: scale(0.8);
+        text-shadow: 2px 2px 4px red,3px 3px 6px black;
+    }
+}
+
+@media (max-width: 768px) {
+    .parameter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parameter {
+        width: 100%;
+    }
+}
